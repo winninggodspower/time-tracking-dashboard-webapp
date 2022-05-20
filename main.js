@@ -1,6 +1,8 @@
 const cards = document.querySelectorAll('.card')
-
 const buttons = document.querySelectorAll('.btn')
+const weekLink = document.getElementById('weekly')
+
+let activeClass;
 
 const timeRef = {
     daily : "Yesterday",
@@ -9,14 +11,13 @@ const timeRef = {
 }
 
 let jsonData;
-fetch('./data.json')
-    .then(response => {
-         return response.json()
-    })
-    .then(data => {
-        console.log(data);
-        jsonData = data
-    })
+const request = async () => {
+    const response = await fetch('./data.json');
+    const json = await response.json();
+    jsonData = json
+}
+request();
+console.log(jsonData);
 
 function ChangeTimeDuration(duration) {
     cards.forEach((element, index) => {
@@ -34,10 +35,18 @@ function ChangeTimeDuration(duration) {
 buttons.forEach((btn,index)=>{
     btn.addEventListener('click', (e)=>{
         let duration = e.target.id;
-        // document.querySelector('.active').classList -= 'active'
-        e.target.classList += ' active'
+        handleClass(e.target)
         ChangeTimeDuration(duration)
     })
 })
 
-// window.onload = ChangeTimeDuration('weekly')
+handleClass(weekLink)
+window.onload = ChangeTimeDuration('weekly')
+
+function handleClass(newActiveLink){
+    if(activeClass){
+        activeClass.classList.remove('active')
+    }
+    newActiveLink.classList += ' active';
+    activeClass = newActiveLink
+}

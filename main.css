@@ -1,7 +1,8 @@
-@import url(https://fonts.google.com/specimen/Rubik);
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&family=Rubik&display=swap');
 
 html{
-    font-family: 'Rubik';
+    font-family: 'Manrope', sans-serif;
+    font-family: 'Rubik', sans-serif;
     color: white;
 }
 
