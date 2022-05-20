@@ -156,6 +156,9 @@ div.self-care{
         grid-template-columns: 100%;
         grid-row-gap: 2%;
     }
+    h1{
+        margin-bottom: 10%;
+    }
     div.profile{
         grid-row: 1/2;
     }
