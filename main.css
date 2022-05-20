@@ -80,9 +80,12 @@ div.profile div:nth-child(2) span:hover{
 }
 
 /* styling for the cards */
+div.card{
+    border-radius: 15px;
+}
 div.card div:nth-child(1){
     height: 20%;
-    overflow: hidden;   
+    overflow: hidden;
 }
 div.card div:nth-child(1) img{
     float: right;
@@ -123,32 +126,29 @@ span.last{
 }
 
 div.work{
-    border-radius: 15px;
     background-color: hsl(15, 100%, 70%);
 }
 div.play{
-    border-radius: 15px;
     background-color: hsl(195, 74%, 62%);
 }
 div.study{
-    border-radius: 15px;
     background-color: hsl(348, 100%, 68%);
 }
 
 div.excercise{
-    border-radius: 15px;
     background-color: hsl(145, 58%, 55%);
 }
 
 div.social{
-    border-radius: 15px;
     background-color: hsl(264, 64%, 52%);
 }
 div.self-care{
-    border-radius: 15px;
     background-color: hsl(43, 84%, 65%);
 }
 
+.active{
+    opacity: 1 !important;
+}
 
 @media (max-width: 400px) {
     div.container{
@@ -157,5 +157,8 @@ div.self-care{
     }
     div.profile{
         grid-row: 1/2;
+    }
+    div.profile div:nth-child(2){
+        flex-direction: row;
     }
 }

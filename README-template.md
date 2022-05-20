@@ -16,9 +16,8 @@ This is a solution to the [Time tracking dashboard challenge on Frontend Mentor]
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
+This is a frontendmentor.oi project programmed by ___winning godspower___
 
 ### The challenge
 
